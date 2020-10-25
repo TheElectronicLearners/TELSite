@@ -1,0 +1,70 @@
+<html>
+<head>
+  <title>Sign In</title>
+  <link rel="icon" type="img/png" href="Elogo.jpg">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <style>
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    </style>
+  <div id="login_div" class="main-div">
+    <img class="mb-4" src="Elogo.jpg" alt="" width="72" height="72">
+    <h3>The Electronic Learners</h3>
+    <input type="email" placeholder="Email..." id="email_field" />
+    <input type="password" placeholder="Password..." id="password_field" />
+
+    <button class="btn btn-lg btn-primary btn-block" onclick="login()">Login to Account</button>
+    <br>
+    <button class="btn btn-lg btn-primary btn-block" onclick="signInWithPopup()">Login with Google</button>
+    <p class="mt-5 mb-3 text-muted">&copy; The Electronic Learners</p>
+  </div>
+
+  <div id="user_div" class="loggedin-div">
+    <img class="mb-4" src="Elogo.jpg" alt="" width="72" height="72">
+    <h3>The Electronic Learners</h3>
+    <p id="user_para">Welcome to Firebase web login Example. You're currently logged in.</p>
+    <button class="btn btn-lg btn-primary btn-block" onclick="logout()">Logout</button>
+    <br>
+    <a class="btn btn-lg btn-primary btn-block" href="index.html">Home</a>
+    <p class="mt-5 mb-3 text-muted">&copy; The Electronic Learners</p>
+  </div>
+
+
+
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+      apiKey: "AIzaSyCoYFGHGPLRY3FFwrGOWTpksppYxdmTMTE",
+      authDomain: "the-electronic-learners.firebaseapp.com",
+      databaseURL: "https://the-electronic-learners.firebaseio.com",
+      projectId: "the-electronic-learners",
+      storageBucket: "the-electronic-learners.appspot.com",
+      messagingSenderId: "241184703551",
+      appId: "1:241184703551:web:21639603df1b8878b8648a",
+      measurementId: "G-5J00XT1Z5L"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
+  <script src="signin.js"></script>
+  
+
+</body>
+</html>
